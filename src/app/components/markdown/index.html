@@ -1,0 +1,13 @@
+<!--ko if: $component.loading-->
+<i class="fa fa-spinner fa-spin"></i>
+<!--/ko-->
+
+<!--ko if: $component.markup-->
+<div class="hljs" data-bind="html: $component.markup"></div>
+<!--/ko-->
+
+<!--ko if: $component.error-->
+<div class="alert alert-danger">
+  <span data-bind="text: $component.error"></span>
+</div>
+<!--/ko-->

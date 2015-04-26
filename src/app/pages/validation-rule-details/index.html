@@ -1,0 +1,10 @@
+<div class="kv-page-header">
+  <h3 class="kv-title text-primary" data-bind="text: '[ ' + $component.ruleName() + ' ]'"></h3>
+</div>
+
+<div class="container">
+  <!--ko if: $component.ruleName-->
+    <!--ko component: { name: 'cko-markdown', params: {file: $component.resourceUrl} }-->
+    <!--/ko-->
+  <!--/ko-->
+</div>

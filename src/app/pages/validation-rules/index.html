@@ -1,0 +1,27 @@
+<div class="kv-page-header">
+  <h3 class="kv-title text-primary" data-bind="text: $component.title"></h3>
+</div>
+
+<div class="col-sm-12">
+  <div style="margin-top: 20px">
+    <ul class="list-unstyled" data-bind="foreach: $component.rules">
+      <li style="margin-bottom: 30px">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="hidden-xs text-danger" data-bind="text: name"></h4>
+            <h5 class="visible-xs text-danger" data-bind="text: name"></h5>
+          </div>
+          <div class="panel-body">
+            <p data-bind="html: description"></p>
+            <p>
+              <a data-bind="attr: {href: '#/' + $component.ruleType() + '-rules/' + encodeURIComponent(name)}">
+                Read More
+              </a>
+            </p>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</div>
