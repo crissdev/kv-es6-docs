@@ -1,6 +1,6 @@
 ### required
 
-> The rule is used to ensure a field has a value.
+> The rule is used to ensure an observable has a value.
 
 
 <br>
@@ -9,7 +9,6 @@
 ```js
 var obs = ko.observable();
 
-// Use default validation message
 obs.extend({ required: true });
 ```
 
@@ -19,7 +18,6 @@ obs.extend({ required: true });
 ```js
 var obs = ko.observable();
 
-// Use default validation message
 obs.extend({
     required: {
         params: true,
@@ -31,15 +29,16 @@ obs.extend({
 <br>
 ##### 3. Conditional validation
 
+The observable is validated if `onlyIf` property returns `true`.
+
 ```js
 var obs = ko.observable();
 var enableValidation = ko.observable(false);
 
-// Use default validation message
 obs.extend({
     required: {
         params: true,        
-        // A simple function or value can be used as well 
+        // A function / observable to enable or disable validation 
         onlyIf: enableValidation
     }
 });
@@ -52,12 +51,10 @@ obs.extend({
 var obs = ko.observable();
 var enableValidation = ko.observable(false);
 
-// Use default validation message
 obs.extend({
     required: {
         params: true,
         message: 'This field is required.',
-        // A simple function or value can be used as well 
         onlyIf: enableValidation
     }
 });
