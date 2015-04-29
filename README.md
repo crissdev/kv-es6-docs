@@ -2,8 +2,34 @@
 
 A simple app created with ES6 and Knockout to browse through Knockout-Validation documentation.
 
-**This is work in progress and any help is welcome. Hopefully this repo will become the `gh-pages` branch
-of [Knockout-Validation](https://github.com/Knockout-Contrib/Knockout-Validation/) library.**
+
+### Application Structure
+
+The main sections of the app: 
+
+- `src` contains code that makes the app (scripts, styles etc.)
+- `src/app` contains code that makes parts of the app (pages, components etc.) 
+- `app/components` contains Knockout components used throughout the application
+- `app/pages` contains custom Knockout components that will be shown as pages
+- `app/shared` contains shared code used throughout the application
+- `app/styles` contains all the CSS required for the application
+
+
+```
+/src/
+|
+|__/app/
+|  |
+|  |__/components/
+|  |
+|  |__/pages/
+|  |
+|  |__/shared/
+|
+|__/styles/
+|
+|__index.html
+```
 
 
 ### Run the app
