@@ -6,9 +6,7 @@ import $ from 'jquery';
 //
 export function register() {
   var components = [
-    { selector: 'cko-router', descriptor: 'app/components/cko-router' },
     { selector: 'cko-window-title', descriptor: 'app/components/window-title' },
-    { selector: 'cko-validation-rule', descriptor: 'app/components/validation-rule' },
     { selector: 'cko-navbar', descriptor: 'app/components/navbar' },
     { selector: 'cko-view-switch', descriptor: 'app/components/view-switch' },
     { selector: 'fork-me-ribbon', descriptor: 'app/components/fork-me-ribbon' },

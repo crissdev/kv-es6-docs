@@ -8,10 +8,7 @@ export default class ViewSwitch {
   constructor() {
     this.component = ko.observable();
     this._routeChangedSubscription = currentRoute.subscribe(this._onRouteChanged, this);
-
-    jQuery(document).ready(function() {
-      setTimeout(hasher.init.bind(hasher), 100);
-    });
+    jQuery(document).ready(hasher.init.bind(hasher));
   }
 
   dispose() {
