@@ -22,7 +22,7 @@ System.config({
     "css": "github:systemjs/plugin-css@0.1.10",
     "hasher": "npm:hasher@1.2.0",
     "highlight.js": "npm:highlight.js@8.5.0",
-    "jquery": "npm:jquery@2.1.3",
+    "jquery": "npm:jquery@2.1.4",
     "knockout": "npm:knockout@3.3.0",
     "knockout.validation": "npm:knockout.validation@2.0.2",
     "marked": "npm:marked@0.3.3",
@@ -30,6 +30,7 @@ System.config({
     "systemjs/plugin-text": "github:systemjs/plugin-text@0.0.2",
     "text": "github:systemjs/plugin-text@0.0.2",
     "twbs/bootstrap": "github:twbs/bootstrap@3.3.4",
+    "underscore.string": "npm:underscore.string@3.0.3",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
@@ -143,6 +144,9 @@ System.config({
     "npm:jquery@2.1.3": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
+    "npm:jquery@2.1.4": {
+      "process": "github:jspm/nodelibs-process@0.1.1"
+    },
     "npm:knockout.validation@2.0.2": {
       "knockout": "npm:knockout@3.3.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
@@ -184,6 +188,9 @@ System.config({
     },
     "npm:string_decoder@0.10.31": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
+    },
+    "npm:underscore.string@3.0.3": {
+      "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:url@0.10.3": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",

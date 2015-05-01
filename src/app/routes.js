@@ -1,8 +1,24 @@
 import ruleTypes from './common/rule-types';
+import rulesGroup from './common/rules-group';
+import _ from 'underscore.string';
+
 
 export default {
   '/': {
     component: 'app/pages/home'
+  },
+  '/{ruleType}-rules/{name}/': {
+    component: 'app/pages/validation-rule-details',
+    rules: {
+      ruleType: ['native', 'custom', 'community'],
+      name: (value, request, valuesObj) => {
+        var allowedRules = rulesGroup[valuesObj.ruleType];
+        return allowedRules.indexOf(valuesObj.name) > -1;
+      }
+    },
+    meta: {
+      docTitle: (route) => _.titleize(route.params.name) + ' Rule'
+    }
   },
   '/{ruleType}-rules/': {
     component: 'app/pages/validation-rules',
@@ -17,22 +33,6 @@ export default {
     component: 'app/pages/configuration',
     meta: {
       docTitle: 'Configuration Options'
-    }
-  },
-  '/{ruleType}-rules/{name}/': {
-    component: 'app/pages/validation-rule-details',
-    rules: {
-      ruleType: ['native', 'custom', 'community'],
-      name: ['required', 'email']
-    },
-    meta: {
-      docTitle: function(route) {
-        return [
-          route.params.name[0].toUpperCase(),
-          route.params.name.substr(1),
-          ' Rule'
-        ].join('');
-      }
     }
   },
   '/localization/': {

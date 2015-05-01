@@ -30,7 +30,8 @@
       "marked": "npm:marked@^0.3.3",
       "systemjs/plugin-css": "github:systemjs/plugin-css@^0.1.10",
       "systemjs/plugin-text": "github:systemjs/plugin-text@^0.0.2",
-      "twbs/bootstrap": "github:twbs/bootstrap@^3.3.4"
+      "twbs/bootstrap": "github:twbs/bootstrap@^3.3.4",
+      "underscore.string": "npm:underscore.string@^3.0.3"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.1.13",
